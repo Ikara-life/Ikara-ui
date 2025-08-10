@@ -1,0 +1,248 @@
+/* CalendarSection.css */
+
+.calendar-section {
+  background-color: #f5f5dc; /* cream shade */
+  padding: 40px 20px;
+  margin-top: 20px; /* ↓ Decreased from maybe 50px or more */
+}
+
+.calendar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.calendar-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: #12303a;
+}
+
+.calendar-sub {
+  text-align: center;
+  color: #6b8597;
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+/* grid layout: left calendar + right event */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* card common */
+.calendar-card,
+.event-card {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 24px rgba(18, 48, 58, 0.06);
+  overflow: hidden;
+}
+
+/* Left calendar specifics */
+.card-heading {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #12303a;
+}
+
+/* mini calendar box */
+.mini-calendar {
+  text-align: center;
+  margin: 0 auto 18px;
+  max-width: 360px;
+}
+
+.month-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #516d78;
+}
+.nav-btn {
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  color: #bfcfd5;
+}
+.month-name {
+  font-weight: 600;
+  color: #1e4250;
+}
+
+/* weekdays */
+.weekday-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: #9fb0b9;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+/* dates grid */
+.dates-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+.date-cell {
+  width: 36px;
+  height: 36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius: 50%;
+  color: #2c4150;
+  font-weight: 500;
+}
+
+/* highlighted / selected dates */
+.date-highlight {
+  background: #f0dca8; /* yellow circle */
+  color: #12303a;
+}
+
+.date-checked {
+  background: #2f7a5f; /* green circle */
+  color: white;
+}
+
+/* upcoming box */
+.upcoming-box {
+  display:flex;
+  gap:14px;
+  align-items:center;
+  margin-top: 22px;
+  padding: 16px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(250, 240, 220, 0.6), rgba(250,240,220,0.4));
+  border: 1px solid rgba(217, 188, 120, 0.25);
+}
+
+.upcoming-box .dot {
+  width: 12px;
+  height: 12px;
+  background: #eacb6b;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+.upcoming-title {
+  font-weight: 700;
+  color: #20343a;
+  margin-bottom: 6px;
+}
+
+.upcoming-link {
+  color: #3c6b6a;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+/* Right event card specifics */
+.event-image-wrap {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.event-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display:block;
+}
+
+/* featured pill */
+.featured-pill {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #f2d87b;
+  color: #2a2a2a;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* event body */
+.event-body .event-meta {
+  color: #5f8590;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.event-title {
+  font-size: 1.8rem;
+  margin: 6px 0 12px;
+  color: #12303a;
+}
+
+.event-desc {
+  color: #54707a;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* info row and join button */
+.event-info-row {
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-bottom: 18px;
+  color: #55767a;
+}
+
+.info-item {
+  font-size: 0.95rem;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.join-btn {
+  background: #2f7a5f;
+  color: white;
+  border: 0;
+  padding: 14px 24px;
+  border-radius: 28px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .calendar-grid {
+    grid-template-columns: 1fr;
+  }
+  .event-image {
+    height: 200px;
+  }
+  .calendar-card, .event-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 520px) {
+  .calendar-title { font-size: 2rem; }
+  .event-title { font-size: 1.4rem; }
+  .mini-calendar { max-width: 100%; }
+  .date-cell { width: 30px; height: 30px; font-size: 0.9rem; }
+}

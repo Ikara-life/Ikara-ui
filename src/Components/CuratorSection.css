@@ -1,0 +1,142 @@
+/* --- Main Section & Background --- */
+.curators-background {
+  background-color: #fcfaf8; /* The soft, off-white background */
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.curators-container {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* --- Titles --- */
+.main-title {
+  font-family: 'Georgia', serif;
+  font-size: 2.8rem;
+  color: #3a3a3a;
+  margin-bottom: 15px;
+}
+
+.main-subtitle {
+  font-size: 1.1rem;
+  color: #888;
+  margin-bottom: 50px;
+}
+
+/* --- Grid for Cards --- */
+.curator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* --- Curator Card Styling --- */
+.curator-card {
+  background-color: #fff;
+  border: 1px solid #f0ebe5;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.presenter-badge {
+  background-color: #fef3c7; /* yellow-200 */
+  color: #92400e; /* amber-800 */
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.curator-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 40px auto 20px;
+}
+
+.curator-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+}
+
+.curator-image-star {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.curator-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.curator-title {
+  color: #55a67a; /* The green color for the title */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.curator-specialty {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.star-rating {
+  color: #f59e0b; /* amber-500 */
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.learn-more-btn {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #555;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #ccc;
+  color: #333;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .curator-grid {
+    grid-template-columns: 1fr;
+  }
+}

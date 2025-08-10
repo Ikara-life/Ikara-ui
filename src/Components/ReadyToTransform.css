@@ -1,0 +1,109 @@
+/* --- Main Section Styling --- */
+.ready-section {
+  /* Vibrant but soft gradient with smooth movement */
+ background: linear-gradient(135deg, #eedfd9, #f6ecce);
+  color: #c9c3bb;
+  text-align: center;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Animated gradient effect */
+  background-size: 300% 300%;
+  animation: animate-gradient 12s ease-in-out infinite;
+}
+
+/* Keyframes for the background gradient animation */
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* --- Typography --- */
+.ready-title {
+  font-family: 'Georgia', serif; /* An elegant serif font for the main title */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4a443d; /* A dark, soft brown instead of harsh black */
+  margin-bottom: 30px;
+}
+
+.ready-subtitle {
+  font-size: 1.1rem;
+  color: #8c857d;
+  margin-bottom: 30px;
+  max-width: 450px;
+}
+
+/* --- Button Styling --- */
+.join-btn {
+  background-color: #4a7c59; /* The muted teal/green from the image */
+  color: white;
+  /* Adjusted padding to make the button narrower */
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px; /* Slightly adjusted radius to match image */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 25px;
+}
+
+.join-btn:hover {
+  background-color: #5a946c;
+  transform: translateY(-2px);
+}
+
+/* --- Secure Checkout Box --- */
+.secure-checkout-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: rgba(236, 232, 227, 0.5); /* Slightly more opaque background */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 8px 16px;
+  border-radius: 50px; /* Pill shape */
+  font-size: 0.9rem;
+  color: #8c857d;
+  margin-bottom: 20px;
+}
+
+.lock-icon {
+  /* No specific styles needed if react-icons default size is okay */
+  font-size: 0.8rem;
+}
+
+
+/* --- Payment Icons & Footer --- */
+.payment-methods {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px; /* Increased gap for better spacing */
+  margin-bottom: 15px;
+}
+
+/* New style for the imported image assets */
+.payment-methods img {
+  height: 24px; /* Set a consistent height for all payment logos */
+  opacity: 0.6; /* Muted opacity to match the design */
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: #b5ada4;
+}
